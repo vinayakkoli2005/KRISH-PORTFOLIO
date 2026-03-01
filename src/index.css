@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: #66FCF1;
+  color: #0B0C10;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #0B0C10;
+  /* fallback */
+  color: #C5C6C7;
+  /* fallback */
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0C10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2833;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #45A29E;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: rgba(31, 40, 51, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 252, 241, 0.1);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(31, 40, 51, 0.8) 0%, rgba(31, 40, 51, 0.2) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(102, 252, 241, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Hide Spline Logo Watermark & Overlays */
+a[href*="spline.design"],
+.spline-watermark,
+#logo,
+#spline-overlay-wrapper div *:not(canvas) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
