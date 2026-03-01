@@ -4,36 +4,6 @@ import { motion } from 'framer-motion';
 import { Briefcase, GraduationCap, ChevronDown, Mail, Phone, Linkedin, PieChart, Code, Users } from 'lucide-react';
 
 const Hero = () => {
-    // Aggressively remove spline logo using DOM manipulation
-    useEffect(() => {
-        const removeSplineLogo = () => {
-            // Target regular links inside the wrapper
-            const links = document.querySelectorAll('a[href*="spline.design"]');
-            links.forEach(link => {
-                link.style.display = 'none';
-                link.style.opacity = '0';
-                link.remove();
-            });
-
-            // Target any shadow DOM elements if react-spline uses standard spline-viewer underneath
-            const splineViewer = document.querySelector('spline-viewer');
-            if (splineViewer && splineViewer.shadowRoot) {
-                const logo = splineViewer.shadowRoot.querySelector('#logo');
-                if (logo) logo.remove();
-            }
-        };
-
-        // Run this multiple times during initial load because the canvas and logo load asynchronously
-        const intervalId = setInterval(removeSplineLogo, 50);
-
-        // Clear interval after 10 seconds assuming it's loaded by then
-        const timeoutId = setTimeout(() => clearInterval(intervalId), 10000);
-
-        return () => {
-            clearInterval(intervalId);
-            clearTimeout(timeoutId);
-        };
-    }, []);
 
     function onLoad(spline) {
         // Try to hide the "Get in touch" button if it's named closely
