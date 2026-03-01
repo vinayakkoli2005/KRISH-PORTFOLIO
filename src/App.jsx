@@ -31,13 +31,13 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="md:w-1/2 glass p-8 rounded-3xl mx-4 md:mx-0 pointer-events-auto"
+                    className="w-full sm:w-2/3 md:w-1/2 glass p-6 md:p-8 rounded-3xl mx-4 md:mx-0 pointer-events-auto"
                 >
                     <motion.h1
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
-                        className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accentLight to-accentMuted"
+                        className="text-4xl sm:text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accentLight to-accentMuted"
                     >
                         Krish Gupta
                     </motion.h1>
@@ -62,12 +62,12 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.1, duration: 0.8 }}
-                        className="mt-8 flex gap-4"
+                        className="mt-8 flex flex-col sm:flex-row gap-4"
                     >
-                        <a href="#experience" className="px-6 py-3 rounded-full bg-accentLight text-darkBg font-semibold hover:bg-white transition-all duration-300">
+                        <a href="#experience" className="w-full sm:w-auto text-center px-6 py-3 rounded-full bg-accentLight text-darkBg font-semibold hover:bg-white transition-all duration-300">
                             Explore My Work
                         </a>
-                        <a href="/Krish_Resume.pdf" download className="px-6 py-3 rounded-full border border-accentMuted text-accentLight hover:bg-accentMuted hover:text-white transition-all duration-300">
+                        <a href="/Krish_Resume.pdf" download className="w-full sm:w-auto text-center px-6 py-3 rounded-full border border-accentMuted text-accentLight hover:bg-accentMuted hover:text-white transition-all duration-300">
                             Download Resume
                         </a>
                     </motion.div>
