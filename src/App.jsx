@@ -17,7 +17,7 @@ const Hero = () => {
     return (
         <section className="relative w-full h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden bg-darkBg">
             {/* 3D Model Container Container */}
-            <div id="spline-overlay-wrapper" className="absolute inset-0 z-0 pointer-events-none">
+            <div id="spline-overlay-wrapper" className="fixed inset-0 w-full h-full z-0 pointer-events-none" style={{ transform: 'translateZ(0)', willChange: 'transform' }}>
                 <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-accentLight">Loading 3D Experience...</div>}>
                     <Spline scene="https://prod.spline.design/Y9eOMCYCCwNwLjew/scene.splinecode" onLoad={onLoad} />
                 </Suspense>
